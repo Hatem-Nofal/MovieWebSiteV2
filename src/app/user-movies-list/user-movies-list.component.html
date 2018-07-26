@@ -1,0 +1,37 @@
+
+
+<div  class=" wrapper wrapper-content animated fadeInRight">
+<div class="row">
+
+  <div *ngFor="let item of Movilelist; let i =index" class="col-lg-4">
+    <div class="contact-box">
+     
+          <div class="modal-content animated flipInY">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">{{item.title}}</h4>
+                                        </div>
+                                        <div class="modal-body" >
+                                        <div align="left"><h5>{{item.overview}}</h5></div>
+                                         <div  >
+                                          <img align="right" src="../assets/img/if_star_285661.png"  height="24" width="24">
+                                         <h5 align="right"><strong>{{item.vote_average}}</strong></h5>
+                                         <h5 align="left"><strong>Release Date : {{item.release_date}}</strong></h5>
+                                         </div>
+                                        </div>
+                                        
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal"data-toggle="modal" data-target="#myModal2" [routerLink]="['/AddToWatchListComponent',item.id,1]">Add To Watch AddToWatchList</button>
+
+                                        </div>
+
+
+
+
+
+    
+    </div>
+
+  </div>
+
+</div>
+</div>
