@@ -1,0 +1,88 @@
+
+<div class="modal inmodal" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated flipInY">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Please Rate Movie First </h4>
+                                        </div>
+                                        <br/>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+                                                  <form (ngSubmit)="onSubmit(fdata.value)" #fdata="ngForm">
+                                                    <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+                                                        <div class="form-group">
+                                                            <label for="User_Comment">User Comment</label>
+                                                            <input type="text" id="User_Comment" class="form-control"  ngModel name="User_Comment" required>
+                                                          </div>
+
+                                                      <div  class="form-group"  >
+                                                        <a   *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+                                                        <i class="fa" [ngClass]="{'fa-star-o':item,'fa-star':!item}"></i>
+                                                        </a>
+                                                     </div>
+
+                                                      <button class="btn btn-primary" type="submit">Add</button>
+
+                                                    </div>
+
+                                                  </form>
+
+                                                </div>
+
+                                              </div>
+
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+<!-- <div  id="sd"  class=" wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+
+      <div *ngFor="let item of Movilelist; let i =index" class="col-lg-4">
+        <div class="contact-box">
+          <!--<a href="profile.html">-->
+            <!-- <div  class="col-sm-4">
+              <div class="text-center">
+                <img alt="image" class="img-circle m-t-xs img-responsive" src={{item.poster_path}}>
+                <div class="m-t-xs font-bold"></div>
+              </div>
+            </div>
+
+              <div class="modal-content animated flipInY">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">{{item.title}}</h4>
+                                            </div>
+                                            <div class="modal-body" >
+                                            <div align="left"><h5>{{item.overview}}</h5></div>
+                                            <div  >
+                                                <a align="right" requierd align="left" *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+                                                <i class="fa" [ngClass]="{'fa-star-o':item,'fa-star':!item}"></i>
+                                                </a>
+                                             </div>
+                                            <div  >
+
+                                             <h5 align="left"><strong>Release Date : {{item.release_date}}</strong></h5>
+                                             </div>
+                                            </div>
+                                            <!-- <div align="right"></div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-white" data-dismiss="modal"data-toggle="modal" data-target="#myModal2" [routerLink]="['/AddToWatchList',item.title]">Add To</button>
+                                                 <button type="button" class="btn btn-white" data-toggle="modal" data-target="#myModal2" [routerLink]="['/AddToWatchList',Movilelist]">Details</button>
+
+                                            </div>
+
+
+
+
+
+          <!--</a>
+        </div>
+
+      </div>
+
+    </div>
+    </div>-->

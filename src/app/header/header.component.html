@@ -1,0 +1,57 @@
+<div class="header">
+
+  <div class="container">
+    <div class="header-inner header-md-height">
+      <a href="#" class="btn-link toggle-sidebar hidden-lg-up pg pg-menu" data-toggle="horizontal-menu">
+      </a>
+      <div class="">
+
+        <div class="header-inner justify-content-start header-lg-height title-bar">
+          <div class="brand inline align-self-end">
+            <img src="../assets/img/logo-video-camera.png" alt="logo" data-src="./assets/img/logo-video-camera.png" data-src-retina="./assets/img/logo-video-camera.png"
+              width="32" height="32">
+          </div>
+          <h2 class="page-title align-self-end">
+            Movies
+          </h2>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <div class="pull-left p-r-10 fs-14 font-heading hidden-md-down">
+          <h4 *ngIf='login' >{{Fname}}</h4> <h4 *ngIf='login' >{{Lastname}}</h4>
+        </div>
+        <div class="pull-right sm-m-r-5">
+          <span class="thumbnail-wrapper d32 circular inline">
+          <img *ngIf='login' [src]="Photourl" alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="32" height="32">
+              </span>
+              &nbsp;
+          <input *ngIf='!login' type="image" id="image" data-toggle="modal" data-target="#myModal2" [routerLink]="['/']" alt="Login"
+            src="../assets/img/enter.png" />
+          <input *ngIf='login' type="image" id="image" data-toggle="modal" data-target="#myModal2" [routerLink]="['/']" alt="Login"
+            src="../assets/img/exit.png" />
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="menu-bar header-sm-height" data-pages-init="horizontal-menu" data-hide-extra-li="4">
+
+      <ul>
+        <li class=" active">
+          <a routerLink="Home">Home</a>
+        </li>
+        <li>
+          <a *ngIf='login' [routerLink]="['/userMovieList']"> MY Movies List</a>
+        </li>
+        <li>
+          <a *ngIf='login' [routerLink]="['/MyProfile']"> My Profile</a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</div>

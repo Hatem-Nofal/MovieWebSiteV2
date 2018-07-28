@@ -1,0 +1,40 @@
+<div class=" wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+
+    <div *ngFor="let Movie of Movilelist; let i =index" class="col-lg-4">
+      <div class="contact-box">
+
+        <div class="modal-content animated flipInY">
+          <div class="modal-header">
+            <h4 class="modal-title">{{Movie.title}}</h4>
+          </div>
+          <div class="modal-body">
+            <div align="center">
+              <h5>{{Movie.overview}}</h5>
+            </div>
+            
+          </div>
+
+          <div class="modal-footer">
+          <div>
+              <a *ngFor="let item of Movie.revenue; let i=index " >
+                <i class="fa" [ngClass]="{'fa-star-o':item,'fa-star':!item}"></i>
+              </a>
+            </div>
+
+            <div  >
+              <h5 class="left">Your Comment : {{Movie.tagline}} </h5>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
